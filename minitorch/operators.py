@@ -7,43 +7,55 @@ import math
 def mul(x, y):
     ":math:`f(x, y) = x * y`"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    a = x * y
+    return a
 
 
 def id(x):
     ":math:`f(x) = x`"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    return x
 
 
 def add(x, y):
     ":math:`f(x, y) = x + y`"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    a = x + y
+    return a
 
 
 def neg(x):
     ":math:`f(x) = -x`"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    a = -x
+    return a
 
 
 def lt(x, y):
     ":math:`f(x) =` 1.0 if x is less than y else 0.0"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x < y:
+      return 1.0
+    else:
+      return 0.0
 
 
 def eq(x, y):
     ":math:`f(x) =` 1.0 if x is equal to y else 0.0"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x == y:
+      return 1.0
+    else: 
+      return 0.0
 
 
 def max(x, y):
     ":math:`f(x) =` x if x is greater than y else y"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x > y:
+      return x
+    else: 
+      return y
 
 
 def sigmoid(x):
@@ -60,7 +72,11 @@ def sigmoid(x):
 
     """
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x >= 0:
+      a = 1.0 / (1.0 + math.exp(-x))
+    else: 
+      a = math.exp(x) / (1.0 + math.exp(x))
+    return a  
 
 
 def relu(x):
@@ -70,13 +86,19 @@ def relu(x):
     (See `<https://en.wikipedia.org/wiki/Rectifier_(neural_networks)>`_ .)
     """
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x > 0:
+      return x
+    else:
+      return 0.0
 
 
 def relu_back(x, y):
     ":math:`f(x) =` y if x is greater than 0 else 0"
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    if x > 0:
+      return y
+    else: 
+      return 0.0
 
 
 EPS = 1e-6
@@ -117,7 +139,6 @@ def map(fn):
 
 
     See `<https://en.wikipedia.org/wiki/Map_(higher-order_function)>`_
-
     Args:
         fn (one-arg function): process one value
 
@@ -125,6 +146,7 @@ def map(fn):
         function : a function that takes a list and applies `fn` to each element
     """
     # TODO: Implement for Task 0.3.
+
     raise NotImplementedError('Need to implement for Task 0.3')
 
 
